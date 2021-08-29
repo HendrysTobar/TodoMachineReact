@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TodoContext } from '../TodoContext';
 import './TodoSearch.css'
 
 //Esta función recib como props, los estados que recibe desde App
-function TodoSearch({searchValue, setSearchValue})
+function TodoSearch()
 {
+
+    const {searchValue, setSearchValue} = useContext(TodoContext);
     /*Esto usa el Hook useState. Este recibe un parámetro, el primer valor,
     que solo se usa en el primer render.
     El Hook retorna dos valores, el valor actual del estado (searchValue) y una función 

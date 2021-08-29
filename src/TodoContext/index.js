@@ -11,6 +11,8 @@ export function TodoProvider(props)
 {
   //Creamos un estado para el valor de la búsqueda
   const [searchValue, setSearchValue] = React.useState("");
+  //Estado para el MOdal
+  const [modalOpen, setModalOpen] = React.useState(false);
   //Se cargan los datos usando el Custom Hook creado arriba, las instrucciones en el objeto, cambian el nombre de la variable
   //El nombre de los atributos dentro del objeto deben llamarse igual que el objeto que retorna, por eso se hace el cambio de nombre
   const {
@@ -61,7 +63,9 @@ export function TodoProvider(props)
             searchValue,
             setSearchValue,
             onCompleteTodo,
-            onDeleteTodo            
+            onDeleteTodo,
+            modalOpen,
+            setModalOpen            
         }}>
             {props.children}
 

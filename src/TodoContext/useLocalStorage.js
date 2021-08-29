@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { useState } from 'react';
-// const defaultTodos = [
-//     { title: "Cortar Cebolla", completed: false },
-//     { title: "Cortar Tomate", completed: false },
-//     { title: "Fritar Huevo", completed: false },
-//   ];
+const defaultTodos = [
+    { title: "Cortar Cebolla", completed: false },
+    { title: "Cortar Tomate", completed: false },
+    { title: "Fritar Huevo", completed: false },
+  ];
   
   //Hook que se encarga de obtener y guardar cosas del LocalStorage
   //Recibe el nombre de la clave para usar en el LocalStorage y el valor inicial
@@ -27,9 +27,9 @@ import { useState } from 'react';
           //Si no hay nada en el LocalStorage
           if (!saved) {
             //Guarde en el LocalStorage el valor inicial
-            localStorage.setItem(itemName, JSON.stringify(initialValue))
+            localStorage.setItem(itemName, JSON.stringify(defaultTodos))
             //E arreglo de respuesta es un arreglo vacío
-            parsedItems = [];
+            parsedItems = [...defaultTodos];
           }
           else {
             //... de lo contrario el arreglo es el obtenido
