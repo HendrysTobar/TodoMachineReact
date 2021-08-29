@@ -1,51 +1,71 @@
-import { React, Fragment } from "react";
+import { React, Fragment, useContext } from "react";
 import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
+import { TodoContext } from "../TodoContext";
 
-export function AppUI({
-  todos,
-  totalTodos,
-  completedTodos,
-  searchValue,
-  setSearchValue,
-  onCompleteTodo,
-  onDeleteTodo,
-}) {
+//De esta manera se usa el contexto en este módulo.
+//Los valores son las propiedades que se crean y se pasan en el Provider
+
+
+
+
+export function AppUI() 
+{
+
+  const {
+    loading,
+    error,
+    searchValue,
+    todos,
+    onCompleteTodo,
+    onDeleteTodo
+  } = useContext(TodoContext );
+
+
   return (
     <Fragment>
-      <TodoCounter
-        //Se envian parámetros
-        totalTodos={totalTodos}
-        completedTodos={completedTodos}
-      />
+      <TodoCounter />
 
-      <TodoSearch
-        //Se envian los estados como props
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-      <TodoList>
-        {todos.map((todo) => {
-          if (
-            searchValue === "" ||
-            todo.title.toLowerCase().includes(searchValue.toLocaleLowerCase())
-          ) {
-            return (
-              <TodoItem
-                completed={todo.completed}
-                key={todo.title}
-                text={todo.title}
-                onComplete={onCompleteTodo}
-                onDelete={onDeleteTodo}
-              />
-            );
+      <TodoSearch />
+      
+        <TodoList>
+          {//Si está carganbdo poner un mensaje
+            loading && <p>Estamos cargando</p>
           }
-          return "";
-        })}
-      </TodoList>
+
+          {//Si hubo un error poner un mensaje
+            error && <p>Hubo un error</p>}
+
+          {//Si no está cargando y los TODOS encontrados es vacío 
+            (!loading && searchValue !== "" && (todos.filter(todo => todo.title.toLowerCase().includes(searchValue.toLowerCase()).lenght))) &&
+            <p>No hay TODOS que coincidan con la búsqueda</p>
+          }
+
+          {todos.map((todo) => {
+            if (
+              searchValue === "" ||
+              todo.title.toLowerCase().includes(searchValue.toLocaleLowerCase())
+            ) {
+              return (
+                <TodoItem
+                  completed={todo.completed}
+                  key={todo.title}
+                  text={todo.title}
+                  onComplete={onCompleteTodo}
+                  onDelete={onDeleteTodo}
+                />
+              );
+            }
+            return "";
+          })}
+
+        </TodoList>
+        
+          
+        
       <CreateTodoButton />
     </Fragment>
   );
