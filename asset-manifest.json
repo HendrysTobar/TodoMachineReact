@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/TodoMachineReact/static/css/main.9fe35c18.chunk.css",
-    "main.js": "/TodoMachineReact/static/js/main.244acc11.chunk.js",
-    "main.js.map": "/TodoMachineReact/static/js/main.244acc11.chunk.js.map",
-    "runtime-main.js": "/TodoMachineReact/static/js/runtime-main.9e364515.js",
-    "runtime-main.js.map": "/TodoMachineReact/static/js/runtime-main.9e364515.js.map",
-    "static/js/2.fb389905.chunk.js": "/TodoMachineReact/static/js/2.fb389905.chunk.js",
-    "static/js/2.fb389905.chunk.js.map": "/TodoMachineReact/static/js/2.fb389905.chunk.js.map",
-    "index.html": "/TodoMachineReact/index.html",
-    "static/css/main.9fe35c18.chunk.css.map": "/TodoMachineReact/static/css/main.9fe35c18.chunk.css.map",
-    "static/js/2.fb389905.chunk.js.LICENSE.txt": "/TodoMachineReact/static/js/2.fb389905.chunk.js.LICENSE.txt"
+    "main.css": "/todo-machine/static/css/main.9fe35c18.chunk.css",
+    "main.js": "/todo-machine/static/js/main.244acc11.chunk.js",
+    "main.js.map": "/todo-machine/static/js/main.244acc11.chunk.js.map",
+    "runtime-main.js": "/todo-machine/static/js/runtime-main.39fb103c.js",
+    "runtime-main.js.map": "/todo-machine/static/js/runtime-main.39fb103c.js.map",
+    "static/js/2.fb389905.chunk.js": "/todo-machine/static/js/2.fb389905.chunk.js",
+    "static/js/2.fb389905.chunk.js.map": "/todo-machine/static/js/2.fb389905.chunk.js.map",
+    "index.html": "/todo-machine/index.html",
+    "static/css/main.9fe35c18.chunk.css.map": "/todo-machine/static/css/main.9fe35c18.chunk.css.map",
+    "static/js/2.fb389905.chunk.js.LICENSE.txt": "/todo-machine/static/js/2.fb389905.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9e364515.js",
+    "static/js/runtime-main.39fb103c.js",
     "static/js/2.fb389905.chunk.js",
     "static/css/main.9fe35c18.chunk.css",
     "static/js/main.244acc11.chunk.js"
