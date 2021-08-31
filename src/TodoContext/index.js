@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+ import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
 //esto creo un contexto, que permite compartir estados entre los componentes de la aplicación
@@ -34,6 +35,13 @@ export function TodoProvider(props)
     setTodos(newTodos);
   }
 
+  //función que se ejecuta cuando se añade un nuevo Todo
+  function onAddTodo(title) { 
+    const newTodos = [...todos];
+    newTodos.push({title: title});
+    setTodos(newTodos);
+  }
+
   //función que se ejecuta cuando se quiere borrar el Todo
   function onDeleteTodo(title) {
     const todoIndex = todos.findIndex(todo => todo.title === title);
@@ -64,6 +72,7 @@ export function TodoProvider(props)
             setSearchValue,
             onCompleteTodo,
             onDeleteTodo,
+            onAddTodo,
             modalOpen,
             setModalOpen            
         }}>

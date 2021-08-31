@@ -6,6 +6,7 @@ import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoContext } from "../TodoContext";
 import { Modal } from '../Modal'
+import TodoForm from "../TodoForm";
 
 //De esta manera se usa el contexto en este módulo.
 //Los valores son las propiedades que se crean y se pasan en el Provider
@@ -65,7 +66,7 @@ export function AppUI() {
 
       {!!modalOpen &&
         <Modal>
-          <p>{todos[0] ? todos[0].title : "No Todo "}</p>
+          <TodoForm></TodoForm>
         </Modal>
       }
       <CreateTodoButton

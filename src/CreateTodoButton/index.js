@@ -6,7 +6,7 @@ function CreateTodoButton(props)
     //Esto es una función que se usa para responder ante el evento onclick del botón.
     function onClickButtonCreate(msg)
     {
-        props.setModalOpen(true);
+        props.setModalOpen(previousState => !previousState);
     }
 
     return (

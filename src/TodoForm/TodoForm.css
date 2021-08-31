@@ -1,0 +1,60 @@
+form
+{
+    background-color: blanchedalmond;
+    border-radius: 0.5em;
+    box-shadow: -2px 1px 14px 0px rgba(0, 0, 0, 0.83);
+    width: 50%;
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    color: #cd00ff;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #1E1E1F;
+    margin-bottom: 26px;
+    font-family: 'Montserrat';
+  }
+
+textarea{
+    width: 85%;
+    height: 5em;
+    border: 0;
+    font-size: 3em;
+    border-radius: inherit;
+}
+
+textarea::placeholder {
+    color: #A5A5A5;
+    font-family: 'Montserrat';
+    font-weight: 400;
+  }
+
+  .TodoForm-button {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    color: #202329;
+    font-weight: 400;
+    width: 120px;
+    height: 48px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Montserrat';
+  }
+
+  .TodoForm-button--add {
+    background: #61DAFA;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+  }
+  
+  .TodoForm-button--cancel {
+    background: transparent;
+  }
